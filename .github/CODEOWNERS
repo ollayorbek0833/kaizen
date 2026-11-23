@@ -1,0 +1,17 @@
+*                     @khurlimanGobenova @abdurauf-dev @ollayorbek0833 @mehroj-x
+
+# Backend (Java)
+/src/                 @ollayorbek0833 @abdurauf-dev
+/pom.xml              @ollayorbek0833
+
+# Frontend (React)
+/frontend/            @khurlimanGobenova @abdurauf-dev
+
+# DevOps / config
+/Dockerfile           @ollayorbek0833
+/docker-compose.yml   @ollayorbek0833
+/.github/             @ollayorbek0833
+
+# Docs
+/docs/                @mehroj-x
+/README.md            @mehroj-x
