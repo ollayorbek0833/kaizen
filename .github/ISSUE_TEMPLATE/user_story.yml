@@ -1,0 +1,85 @@
+name: User story
+description: A new feature or change, written as a user story.
+title: "[STORY] "
+labels: [story]
+body:
+  - type: dropdown
+    id: epic
+    attributes:
+      label: Epic
+      options:
+        - ACC – Accounting core
+        - SAL – Sales
+        - PUR – Purchase
+        - INV – Inventory
+        - EXP – Expense and income
+        - EMP – Employee ledger
+        - FIN – Financial statements
+        - REP – Reporting, testing and review
+        - New epic (describe below)
+    validations:
+      required: true
+
+  - type: input
+    id: story-id
+    attributes:
+      label: Story ID
+      description: Next free ID in the epic, e.g. REP-9. Use the same ID in the branch name and commits.
+      placeholder: REP-9
+    validations:
+      required: true
+
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      value: |
+        As a <CEO / manager / accountant>,
+        I want <goal>,
+        so that <benefit>.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Testable conditions. The story is done when all of them are met.
+      placeholder: |
+        - [ ] Given ..., when ..., then ...
+        - [ ] Ledger stays balanced after the action
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High – must have
+        - Medium – should have
+        - Low – could have
+    validations:
+      required: true
+
+  - type: dropdown
+    id: sprint
+    attributes:
+      label: Target sprint
+      options:
+        - Current sprint
+        - Next sprint
+        - Backlog
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: Definition of Done
+      description: From the project requirements. Tick them in the PR that closes this story.
+      options:
+        - label: Code reviewed and merged
+        - label: Unit or manual test passed
+        - label: Ledger stays balanced after the action
+        - label: Demonstrated in the sprint review
