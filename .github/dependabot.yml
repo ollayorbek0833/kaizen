@@ -1,0 +1,12 @@
+version: 2
+updates:
+  # Keeps the SHA-pinned actions in .github/workflows up to date.
+  # Updates arrive as normal PRs and go through CI and review like any other change.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    labels: [task]
+    groups:
+      actions:
+        patterns: ["*"]
