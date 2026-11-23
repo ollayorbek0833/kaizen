@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Project requirements (epics, stories, Definition of Done)
+    url: https://github.com/ollayorbek0833/kaizen/blob/main/ERP_Requirements_Team_Kaizen.pdf
+    about: Check the planned scope before opening a new story.

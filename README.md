@@ -1,5 +1,7 @@
 # ERP
 
+[![CI/CD](https://github.com/ollayorbek0833/kaizen/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ollayorbek0833/kaizen/actions/workflows/ci.yml)
+
 ERP system built by Team Kaizen. It covers accounting (with period lock), sales (with credit notes), purchasing, inventory (with low-stock alerts), partners and user login with roles. The UI follows Odoo's look and workflow: app launcher, list/kanban views with search, filters and grouping, and form sheets with status bars. The planned scope is in `ERP_Requirements_Team_Kaizen.pdf`, and the sprint plan is in [`docs/sprint-1-2-plan.md`](docs/sprint-1-2-plan.md).
 
 ## Tech stack
@@ -124,6 +126,8 @@ npm run types     # TypeScript check
 npm run lint      # ESLint
 npm run build     # type check + production build
 ```
+
+The same checks run in GitHub Actions on every pull request. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the branch, review and merge rules.
 
 ## Conventions
 

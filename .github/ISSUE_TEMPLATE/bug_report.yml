@@ -1,0 +1,95 @@
+name: Bug report
+description: Something in the ERP is broken or gives a wrong result.
+title: "[BUG] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please give enough detail that someone else can reproduce the problem.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - ACC – Accounting core (accounts, journal, ledgers, period lock)
+        - SAL – Sales (customers, invoices, payments, credit notes)
+        - PUR – Purchase (suppliers, purchase orders, receipts, payments)
+        - INV – Inventory (products, stock, adjustments)
+        - EXP – Expense and income
+        - EMP – Employee ledger and payroll
+        - FIN – Financial statements (P&L, balance sheet, cash flow)
+        - REP – Dashboard, export, audit log
+        - Login, users and roles
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High – blocks work, loses data, or the ledger is wrong
+        - Medium – wrong behaviour, but there is a workaround
+        - Low – cosmetic or minor
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Log in as accountant
+        2. Open Sales → Invoices → New
+        3. Add 60 kg at price 2,200 and confirm
+        4. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Include error messages and screenshots if you have them.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ledger
+    attributes:
+      label: Does it affect the ledger?
+      description: Every action must keep the ledger balanced (Definition of Done).
+      options:
+        - "No"
+        - Yes, the ledger is unbalanced or posts wrong amounts
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where did it happen?
+      options:
+        - Docker (./setup.sh)
+        - Local run (mvn spring-boot:run + npm run dev)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant backend log lines (docker compose logs backend). Remove any passwords or tokens.
+      render: text

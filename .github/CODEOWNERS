@@ -1,0 +1,30 @@
+# Code owners are requested for review automatically, and main's branch
+# protection requires one of them to approve before a PR can be merged.
+# Authors can't approve their own PRs, so every path needs at least two owners.
+# Every owner listed here must be a collaborator with write access, or
+# GitHub ignores them.
+#
+# The last matching pattern wins, so keep the default owners first.
+
+# Default: the whole repository
+*                               @ollayorbek0833 @mehroj-x
+
+# Change-control configuration: CI/CD, templates and this file
+/.github/                       @ollayorbek0833 @mehroj-x
+
+# Build and deployment
+/pom.xml                        @ollayorbek0833 @mehroj-x
+/Dockerfile                     @ollayorbek0833 @mehroj-x
+/docker-compose.yml             @ollayorbek0833 @mehroj-x
+/setup.sh                       @ollayorbek0833 @mehroj-x
+
+# Backend: module boundaries and cross-module wiring
+/src/main/java/org/example/erp/composition/           @ollayorbek0833 @mehroj-x
+/src/main/java/org/example/erp/platform/              @ollayorbek0833 @mehroj-x
+/src/test/java/org/example/erp/ArchitectureTest.java  @ollayorbek0833 @mehroj-x
+
+# Frontend
+/frontend/                      @ollayorbek0833 @mehroj-x
+
+# When more teammates join, add them next to the paths they own, for example:
+# /frontend/                    @ollayorbek0833 @mehroj-x @teammate-username

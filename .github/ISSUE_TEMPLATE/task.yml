@@ -1,0 +1,43 @@
+name: Technical task
+description: Work that is not a user-facing feature, such as refactoring, CI, tests, docs or dependency updates.
+title: "[TASK] "
+labels: [task]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Backend
+        - Frontend
+        - Tests
+        - CI/CD and repository settings
+        - Docker and deployment
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs to be done
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: The problem this solves or the risk it removes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      placeholder: |
+        - [ ] ...
+    validations:
+      required: true
